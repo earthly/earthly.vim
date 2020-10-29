@@ -40,7 +40,7 @@ syn match earthfileOperatorFlag '\s\-\+\(\w\|\-\)\+'
 
 " Target
 " debian:
-syn match earthfileTargetLabel '^\zs\s*\w*\ze\:'
+syn match earthfileTargetLabel '^\zs\s*[a-z0-9\-_]\+\ze\:'
 syn match earthfileTargetReference '\(\w\|_\|\-\|/\|:\|+\|\.\)*\s' contained nextgroup=earthfileKeyword
 
 " Keywords
