@@ -1,6 +1,4 @@
-# earthfile-syntax-highlighting-vim README
-
-<div align="center"><img alt="Earthly" width="700px" src="https://github.com/earthly/earthly/raw/main/img/logo-banner-white-bg.png" /></div>
+# Earthfile syntax highlighing
 
 Syntax highlighting for [Earthly](https://earthly.dev) Earthfiles for Vim.
 
@@ -8,13 +6,21 @@ For an introduction of Earthly see the [Earthly GitHub repository](https://githu
 
 ## Installation Notes
 
-### Automatic
+Use your favorite plugin manager.
 
-The easiest way to install syntax highlighting for Earthfile is by running `make` in this directory. This craetes and copies all the files required.
+### Vim-Plug
+
+Using the [vim-plug](https://github.com/junegunn/vim-plug) plugin manager, add:
+
+    Plug 'earthly/earthly.vim', { 'branch': 'main' }
+
+Then run
+
+    :PlugInstall
 
 ### Manual
 
-To install manually, copy `Earthfile.vim` to `~/.vim/syntax/Earthfile.vim`, you may need to create the directories.
+To install manually, copy `syntax/Earthfile.vim` to `~/.vim/syntax/Earthfile.vim`.
 
 Now write the following into the file at `~/.vim/ftdetect/Earthfile.vim`
 
@@ -29,4 +35,4 @@ Neovim users will have to change the `~/.vim/` prefix in the above steps to `~/.
 
 ## Screenshot
 
-![Java example Earthfile in Vim](https://raw.githubusercontent.com/vishnugt/earthly/main/contrib/earthfile-syntax-highlighting-vim/Screenshot.png)
+![Java example Earthfile in Vim](Screenshot.png)
