@@ -20,7 +20,7 @@ syn match earthfileEscape '\\$'
 
 " Strings
 " "<string>"
-syn region earthfileString start="\"" end = "\""
+syn region earthfileString start="\"" skip=+\\"+ end = "\""
 " '<string>'
 syn region earthfileString start="'" end = "'"
 
@@ -44,7 +44,10 @@ syn match earthfileTargetLabel '^\zs\s*[a-z0-9\-_]\+\ze\:'
 syn match earthfileTargetReference '\(\w\|_\|\-\|/\|:\|+\|\.\)*\s' contained nextgroup=earthfileKeyword
 
 " Keywords
-syn match earthfileKeyword '^\s*LOCALLY\s*\|^\s*FROM DOCKERFILE\s*\|^\s*COPY\s*\|^\s*SAVE ARTIFACT\s*\|^\s*SAVE IMAGE\s*\|^\s*RUN\s*\|^\s*LABEL\s*\|^\s*EXPOSE\s*\|^\s*VOLUME\s*\|^\s*USER\s*\|^\s*ENV\s*\|^\s*ARG\s*\|^\s*BUILD\s*\|^\s*WORKDIR\s*\|^\s*ENTRYPOINT\s*\|^\s*CMD\s*\|^\s*GIT CLONE\s*\|^\s*DOCKER LOAD\s*\|^\s*DOCKER PULL\s*\|^\s*HEALTHCHECK\s*NONE\|^\s*HEALTHCHECK\s*CMD\|^\s*WITH DOCKER\|^\s*END'
+syn keyword earthlyConditional IF ELSE END
+hi def link earthlyConditional Conditional
+
+syn match earthfileKeyword '^\s*LOCALLY\s*\|^\s*FROM DOCKERFILE\s*\|^\s*COPY\s*\|^\s*SAVE ARTIFACT\s*\|^\s*SAVE IMAGE\s*\|^\s*RUN\s*\|^\s*LABEL\s*\|^\s*EXPOSE\s*\|^\s*VOLUME\s*\|^\s*USER\s*\|^\s*ENV\s*\|^\s*ARG\s*\|^\s*BUILD\s*\|^\s*WORKDIR\s*\|^\s*ENTRYPOINT\s*\|^\s*CMD\s*\|^\s*GIT CLONE\s*\|^\s*DOCKER LOAD\s*\|^\s*DOCKER PULL\s*\|^\s*HEALTHCHECK\s*NONE\|^\s*HEALTHCHECK\s*CMD\|^\s*WITH DOCKER'
 syn match earthfileKeyword '^\s*FROM\s*' nextgroup=earthfileBaseImage
 syn match earthfileBaseImage '\S\+' contained
 
