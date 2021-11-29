@@ -18,6 +18,10 @@ Then run
 
     :PlugInstall
 
+### Pathogen
+
+    git clone git@github.com:earthly/earthly.vim.git ~/.vim/bundle/earthly
+
 ### Manual
 
 To install manually, copy `syntax/Earthfile.vim` to `~/.vim/syntax/Earthfile.vim`.
