@@ -47,7 +47,7 @@ syn match earthfileTargetReference '\(\w\|_\|\-\|/\|:\|+\|\.\)*\s' contained nex
 syn keyword earthlyConditional IF ELSE END
 hi def link earthlyConditional Conditional
 
-syn match earthfileKeyword '^\s*LOCALLY\s*\|^\s*FROM DOCKERFILE\s*\|^\s*COPY\s*\|^\s*SAVE ARTIFACT\s*\|^\s*SAVE IMAGE\s*\|^\s*RUN\s*\|^\s*LABEL\s*\|^\s*EXPOSE\s*\|^\s*VOLUME\s*\|^\s*USER\s*\|^\s*ENV\s*\|^\s*ARG\s*\|^\s*BUILD\s*\|^\s*WORKDIR\s*\|^\s*ENTRYPOINT\s*\|^\s*CMD\s*\|^\s*GIT CLONE\s*\|^\s*VERSION\s*\|^\s*DOCKER LOAD\s*\|^\s*DOCKER PULL\s*\|^\s*HEALTHCHECK\s*NONE\|^\s*HEALTHCHECK\s*CMD\|^\s*WITH DOCKER\s*\|^\s*CACHE'
+syn match earthfileKeyword '^\s*ADD\s*\|^\s*ARG\s*\|^\s*BUILD\s*\|^\s*CACHE\s*\|^\s*CMD\s*\|^\s*COMMAND\s*\|^\s*COPY\s*\|^\s*DO\s*\|^\s*DOCKER LOAD\s*\|^\s*DOCKER PULL\s*\|^\s*ENTRYPOINT\s*\|^\s*ENV\s*\|^\s*EXPOSE\s*\|^\s*FROM DOCKERFILE\s*\|^\s*GIT CLONE\s*\|^\s*HEALTHCHECK\s*CMD\|^\s*HEALTHCHECK\s*NONE\|^\s*HOST\s*\|^\s*IMPORT\s*\|^\s*LABEL\s*\|^\s*LOCALLY\s*\|^\s*ONBUILD\s*\|^\s*PIPELINE\s*\|^\s*PROJECT\s*\|^\s*RUN\s*\|^\s*SAVE ARTIFACT\s*\|^\s*SAVE IMAGE\s*\|^\s*SHELL\s*\|^\s*STOPSIGNAL\s*\|^\s*TRIGGER\s*\|^\s*USER\s*\|^\s*VERSION\s*\|^\s*VOLUME\s*\|^\s*WITH DOCKER\s*\|^\s*WORKDIR'
 syn match earthfileKeyword '^\s*FROM\s*' nextgroup=earthfileBaseImage
 syn match earthfileBaseImage '\S\+' contained
 
