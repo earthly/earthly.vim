@@ -6,7 +6,7 @@ For an introduction of Earthly see the [Earthly GitHub repository](https://githu
 
 ## Installation Notes
 
-Use your favorite plugin manager.
+Use your favorite plugin manager and ensure vim syntax highlighting is turned on.
 
 ### Vim-Plug
 
