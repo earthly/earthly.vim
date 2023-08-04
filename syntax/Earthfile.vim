@@ -40,7 +40,7 @@ syn match earthfileOperatorFlag '\s\-\+\(\w\|\-\)\+'
 
 " Target
 " debian:
-syn match earthfileTargetLabel '^\zs\s*[a-z0-9\-]\+\ze\:'
+syn match earthfileTargetLabel '^\zs\s*[a-z0-9\-.]\+\ze\:'
 syn match earthfileTargetReference '\(\w\|_\|\-\|/\|:\|+\|\.\)*\s' contained nextgroup=earthfileKeyword
 
 " Keywords
@@ -48,7 +48,7 @@ syn keyword earthlyConditional IF ELSE END
 hi def link earthlyConditional Conditional
 
 syn match earthfileKeyword '^\s*LOCALLY\s*\|^\s*FROM DOCKERFILE\s*\|^\s*COPY\s*\|^\s*SAVE ARTIFACT\s*\|^\s*SAVE IMAGE\s*\|^\s*RUN\s*\|^\s*LABEL\s*\|^\s*EXPOSE\s*\|^\s*VOLUME\s*\|^\s*USER\s*\|^\s*ENV\s*\|^\s*ARG\s*\|^\s*BUILD\s*\|^\s*WORKDIR\s*\|^\s*ENTRYPOINT\s*\|^\s*CMD\s*\|^\s*GIT CLONE\s*\|^\s*VERSION\s*\|^\s*DOCKER LOAD\s*\|^\s*DOCKER PULL\s*\|^\s*HEALTHCHECK\s*NONE\|^\s*HEALTHCHECK\s*CMD\|^\s*WITH DOCKER\s*\|^\s*CACHE'
-syn match earthfileKeyword '^\s*FROM\s*' nextgroup=earthfileBaseImage
+syn match earthfileKeyword '^\s*FROM\( DOCKERFILE\)\@!\s*' nextgroup=earthfileBaseImage
 syn match earthfileBaseImage '\S\+' contained
 
 
