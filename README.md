@@ -6,7 +6,7 @@ For an introduction of Earthly see the [Earthly GitHub repository](https://githu
 
 ## Requirements
 
-- Install [vim](https://www.vim.org/download.php)
+- Install [vim](https://www.vim.org/download.php) or [neovim](https://neovim.io/)
 - Enable syntax highlighting:
     
     Update your `~/.vimrc` file to include: 
