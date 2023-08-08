@@ -4,9 +4,19 @@ Syntax highlighting for [Earthly](https://earthly.dev) Earthfiles for Vim.
 
 For an introduction of Earthly see the [Earthly GitHub repository](https://github.com/earthly/earthly) or the [Earthly documentation](https://docs.earthly.dev).
 
+## Requirements
+
+- Install [vim](https://www.vim.org/download.php) or [neovim](https://neovim.io/)
+- Enable syntax highlighting:
+    
+    Update your `~/.vimrc` file to include: 
+    ```bash 
+    syntax on
+    ```
+
 ## Installation Notes
 
-Use your favorite plugin manager.
+Use your favorite plugin manager:
 
 ### Vim-Plug
 
